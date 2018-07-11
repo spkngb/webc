@@ -1,0 +1,87 @@
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## ~/.inputrc version 0.1.2 (2018-01-15-01)
+##
+## This file controls behaviour of line
+## input editing for programs that use
+## the GNU Readline library.
+## Existing programs include
+## FTP, Bash, GDB
+## for GNU/Linux, FreeBSD, Cygwin, etc
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === BOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## system-wide settings
+
+$include /etc/inputrc
+
+# do not bell on tab-completion
+#set bell-style none
+
+set meta-flag on
+set input-meta on
+set convert-meta off
+set output-meta on
+
+# Completed names which are symbolic links to
+# directories have a slash appended.
+set mark-symlinked-directories on
+
+set editing-mode emacs
+
+$if mode=emacs
+
+# for linux console and RH/Debian xterm
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+# commented out keymappings for pgup/pgdown to reach begin/end of history
+#"\e[5~": beginning-of-history
+#"\e[6~": end-of-history
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# for rxvt
+"\e[8~": end-of-line
+"\eOc": forward-word
+"\eOd": backward-word
+
+# for non RH/Debian xterm, can't hurt for RH/DEbian xterm
+"\eOH": beginning-of-line
+"\eOF": end-of-line
+
+# for freebsd console
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+$endif
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## Arrow keys
+## Up = history-search-backward
+## Down = history-search-forward
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\eOA": history-search-backward
+"\eOB": history-search-forward
+"^[[A": history-search-backward
+"^[[B": history-search-forward
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## Control-Left = backward-word
+## Control-Right = forward-word
+## Control-Home = beginning-of-line
+## Control-End = end-of-line
+
+#";5D": backward-word
+#";5C": forward-word
+#";5H": beginning-of-line
+#";5F": end-of-line
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === EOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
