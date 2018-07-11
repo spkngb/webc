@@ -1,0 +1,17 @@
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## ~/.bashrc.d/defaults version 0.1.1 (2018-01-15-01)
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === BOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export EDITOR=vim
+export PAGER="less -X -R -F"
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000000
+export HISTTIMEFORMAT="[ %Y-%m-%d ~ %T ] "
+shopt -s histappend   # append to history, don't overwrite it
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === EOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

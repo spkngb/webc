@@ -1,0 +1,47 @@
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## ~/.bashrc.d/git version 0.1.1 (2018-01-15-01)
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === BOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#export GIT_AUTHOR_NAME="Your Name"
+#export GIT_AUTHOR_EMAIL="your@email.com"
+#export GIT_COMMITTER_NAME=
+#export GIT_COMMITTER_EMAIL=
+
+[ -d /usr/lib/git-core ] && export PATH=/usr/lib/git-core:/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+git_branch_bin=
+function git-branch()
+{
+    local delete=no
+    for arg; do
+        [ "" == "-D" ] && delete=yes
+    done
+    if [ "" == "yes" ]; then
+         -v 
+    else
+         -v -a 
+    fi
+}
+
+# useful aliases
+which git-status > /dev/null 2>&1 || alias git-status="git status"
+which git-diff > /dev/null 2>&1 || alias git-diff="git diff"
+which git-add > /dev/null 2>&1 || alias git-add="git add"
+which git-branch > /dev/null 2>&1 || alias git-branch="git branch"
+which git-commit > /dev/null 2>&1 || alias git-commit="git commit"
+which git-log > /dev/null 2>&1 || alias git-log="git log"
+
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
+alias gb="git branch"
+alias gc="git commit"
+alias gca="git commit -v -a"
+alias gcam="git commit --amend -v"
+alias gl="git log"
+alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === EOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,14 @@
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## ~/.bashrc.d/user-path version 0.1.1 (2018-01-15-01)
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === BOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# set PATH so it includes user's private bin if it exists
+if ( [ h$HOME != 'h' ] && [ -d "$HOME/bin" ] ) ; then
+    PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+fi
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === EOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

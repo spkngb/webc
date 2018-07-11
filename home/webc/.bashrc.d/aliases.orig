@@ -1,0 +1,47 @@
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## ~/.bashrc.d/aliases version 0.1.2 (2018-01-21-01)
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === BOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+rmhist()
+{
+    start=$1
+    end=$2
+    count=$(( end - start ))
+    while [ $count -ge 0 ] ; do
+        history -d $start
+        ((count--))
+    done
+}
+
+mkchecksums()
+{
+    filemask=$1
+}
+
+mklst()
+{
+    filemask=$1
+}
+
+alias cp1='/bin/cp'
+alias cp2='rsync -a --info=progress2 --no-i-r'
+alias cp2='rsync -a --progress --no-i-r'
+
+alias rscp='rsync -aP'
+alias rsmv='rsync -aP --remove-source-files'
+
+alias ListFilesSortedByLastModificationTime='ls -lrt'
+
+alias today1="date '+%Y%m%d'"
+alias today2="date '+%Y-%m-%d'"
+
+alias now1="date '+%Y%m%d%H%M%S'"
+alias now2="date '+%Y-%m-%d_%H-%M-%S'"
+
+alias tree='find . -print | sed -e '\''s;[^/]*/;|____;g;s;____|; |;g'\'''
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## === EOF ===
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
