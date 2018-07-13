@@ -3624,8 +3624,8 @@ Installed-Size: 345
 Maintainer: Alessandro Ghedini <ghedo@debian.org>
 Architecture: i386
 Multi-Arch: foreign
-Version: 7.52.1-5+deb9u5
-Depends: libc6 (>= 2.17), libcurl3 (= 7.52.1-5+deb9u5), zlib1g (>= 1:1.1.4)
+Version: 7.52.1-5+deb9u6
+Depends: libc6 (>= 2.17), libcurl3 (= 7.52.1-5+deb9u6), zlib1g (>= 1:1.1.4)
 Description: command line tool for transferring data with URL syntax
  curl is a command line tool for transferring data with URL syntax, supporting
  DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3,
@@ -4101,7 +4101,7 @@ Maintainer: Alessandro Ghedini <ghedo@debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: curl
-Version: 7.52.1-5+deb9u5
+Version: 7.52.1-5+deb9u6
 Depends: libc6 (>= 2.17), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.14+dfsg), libidn2-0 (>= 0.6), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libldap-2.4-2 (>= 2.4.7), libnghttp2-14 (>= 1.12.0), libpsl5 (>= 0.13.0), librtmp1 (>= 2.4+20131018.git79459a2-3~), libssh2-1 (>= 1.7.0), libssl1.0.2 (>= 1.0.2d), zlib1g (>= 1:1.1.4)
 Recommends: ca-certificates
 Description: easy-to-use client-side URL transfer library (OpenSSL flavour)
