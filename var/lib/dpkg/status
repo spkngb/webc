@@ -6938,8 +6938,8 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: foreign
 Source: cups
-Version: 2.2.1-8+deb9u1
-Depends: libc6 (>= 2.4), libcups2 (>= 1.6.2), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), cups-common (>= 2.2.1-8+deb9u1)
+Version: 2.2.1-8+deb9u2
+Depends: libc6 (>= 2.4), libcups2 (>= 1.6.2), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), cups-common (>= 2.2.1-8+deb9u2)
 Description: Common UNIX Printing System(tm) - PPD manipulation utilities
  The Common UNIX Printing System (or CUPS(tm)) is a printing system and
  general replacement for lpd and the like.  It supports the Internet
