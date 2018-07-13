@@ -12661,11 +12661,11 @@ Package: openssl
 Status: install ok installed
 Priority: optional
 Section: utils
-Installed-Size: 1231
+Installed-Size: 1232
 Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: foreign
-Version: 1.1.0f-3+deb9u1
+Version: 1.1.0f-3+deb9u2
 Depends: libc6 (>= 2.15), libssl1.1 (>= 1.1.0)
 Suggests: ca-certificates
 Conffiles:
