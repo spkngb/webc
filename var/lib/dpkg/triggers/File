@@ -34,3 +34,5 @@
 /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders libgdk-pixbuf2.0-0:i386
 /usr/lib/i386-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders libgdk-pixbuf2.0-0:i386
 /usr/share/cups/ppd-updaters cups/noawait
+/etc/php/7.0/cli/conf.d php7.0-cli/noawait
+/etc/php/7.0/fpm/conf.d php7.0-fpm/noawait

@@ -1,9 +1,9 @@
-TARGETS = cups nginx hwclock.sh plymouth urandom alsa-utils dnsmasq sendsigs umountnfs.sh networking umountfs umountroot halt reboot
+TARGETS = cups php7.0-fpm nginx hwclock.sh plymouth urandom alsa-utils dnsmasq sendsigs umountnfs.sh networking umountfs umountroot halt reboot
 dnsmasq: nginx
-sendsigs: dnsmasq plymouth alsa-utils nginx
-umountnfs.sh: sendsigs dnsmasq plymouth alsa-utils nginx
-networking: umountnfs.sh dnsmasq nginx
-umountfs: umountnfs.sh networking dnsmasq urandom plymouth hwclock.sh alsa-utils nginx
+sendsigs: dnsmasq plymouth nginx alsa-utils php7.0-fpm
+umountnfs.sh: sendsigs dnsmasq plymouth nginx alsa-utils php7.0-fpm
+networking: dnsmasq umountnfs.sh nginx php7.0-fpm
+umountfs: dnsmasq umountnfs.sh urandom plymouth networking hwclock.sh nginx alsa-utils php7.0-fpm
 umountroot: umountfs
 halt: umountroot
 reboot: umountroot
