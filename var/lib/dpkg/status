@@ -322,6 +322,26 @@ Description: PulseAudio sound server
  This package contains the daemon and basic module set.
 Homepage: http://www.pulseaudio.org
 
+Package: mariadb-common
+Status: install ok installed
+Priority: optional
+Section: database
+Installed-Size: 70
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Multi-Arch: foreign
+Source: mariadb-10.1
+Version: 10.1.26-0+deb9u1
+Depends: mysql-common (>= 5.6.25)
+Conffiles:
+ /etc/mysql/mariadb.cnf 46a0151b3b022b225cabb97e6d1ad947
+Description: MariaDB common metapackage
+ MariaDB is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MariaDB are speed, robustness and
+ ease of use.
+Homepage: https://mariadb.org/
+
 Package: libpaper1
 Status: install ok installed
 Priority: optional
@@ -1540,6 +1560,34 @@ Description: X.Org X server -- ATI r128 display driver
  This package is built from the X.org xf86-video-r128 driver module.
 Homepage: https://www.x.org
 
+Package: mariadb-client-10.1
+Status: install ok installed
+Priority: optional
+Section: database
+Installed-Size: 42113
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: mariadb-10.1
+Version: 10.1.26-0+deb9u1
+Replaces: mariadb-client-10.0, mariadb-client-5.5, mariadb-server-10.0 (<< 10.0.13-1~), mysql-client-5.5, mysql-client-5.6, mysql-client-5.7, mytop, virtual-mysql-client
+Provides: virtual-mysql-client
+Depends: debianutils (>= 1.6), mariadb-client-core-10.1 (>= 10.1.26-0+deb9u1), perl:any, libaio1 (>= 0.3.93), libc6 (>= 2.17), libjemalloc1 (>= 2.1.1), libpcre3, libstdc++6 (>= 5.2), libsystemd0, zlib1g (>= 1:1.2.0)
+Recommends: libdbd-mysql-perl (>= 1.2202), libdbi-perl, libterm-readkey-perl
+Breaks: mariadb-client-10.0, mariadb-client-5.5, mariadb-server-10.0 (<< 10.0.13-1~), mysql-client-5.5, mysql-client-5.6, mysql-client-5.7
+Conflicts: mysql-client-core-5.5, mysql-client-core-5.6, mysql-client-core-5.7, mytop, virtual-mysql-client
+Conffiles:
+ /etc/mysql/mariadb.conf.d/50-client.cnf 5898a2c9f6b119afac615d3377f2db49
+ /etc/mysql/mariadb.conf.d/50-mysql-clients.cnf 593e201008e699b8af7abcf9eb6c5d88
+Description: MariaDB database client binaries
+ MariaDB is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MariaDB are speed, robustness and
+ ease of use.
+ .
+ This package includes the client binaries and the additional tools
+ innotop and mysqlreport.
+Homepage: https://mariadb.org/
+
 Package: libcc1-0
 Status: install ok installed
 Priority: optional
@@ -1965,6 +2013,25 @@ Description: Common UNIX Printing System(tm) - server common files
  This package provides common files for CUPS server.
 Homepage: https://www.cups.org/
 
+Package: default-mysql-server
+Status: install ok installed
+Priority: optional
+Section: database
+Installed-Size: 9
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-defaults
+Version: 1.0.2
+Depends: mariadb-server-10.1
+Description: MySQL database server binaries and system database setup (metapackage)
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+ .
+ This package depends on the default implementation of all the infrastructure
+ needed to setup system databases.
+
 Package: libfam0
 Status: install ok installed
 Priority: optional
@@ -2177,6 +2244,20 @@ Description: low level cryptographic library (public-key cryptos)
  require the GNU multiple precision arithmetic library (libgmp) for
  their large integer computations.
 Homepage: http://www.lysator.liu.se/~nisse/nettle/
+
+Package: mysql-server
+Status: install ok installed
+Priority: optional
+Section: misc
+Installed-Size: 8
+Maintainer: Ondřej Surý <ondrej@debian.org>
+Architecture: i386
+Source: mysql-transitional
+Version: 5.5.9999+default
+Depends: default-mysql-server
+Description: MySQL database server binaries and system database setup [transitional]
+ This is a transitional MySQL database that depends on default MySQL
+ database metapackage.  It can be safely removed.
 
 Package: gconf2
 Status: install ok installed
@@ -2567,6 +2648,29 @@ Description: Tools for manipulating Linux Wireless Extensions
  allowing you to set Wireless LAN specific parameters and get the
  specific stats.
 Homepage: http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
+
+Package: mariadb-server-core-10.1
+Status: install ok installed
+Priority: optional
+Section: database
+Installed-Size: 23728
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: mariadb-10.1
+Version: 10.1.26-0+deb9u1
+Replaces: mariadb-client-10.1 (<< 10.1.26-0+deb9u1), mariadb-server-10.1 (<< 10.1.26-0+deb9u1), mariadb-server-core-10.0, mariadb-server-core-5.5, mysql-client-5.5, mysql-client-5.6, mysql-client-5.7, mysql-server-core-5.5, mysql-server-core-5.6, mysql-server-core-5.7, virtual-mysql-server-core
+Provides: virtual-mysql-server-core
+Depends: mariadb-common (>= 10.1.26-0+deb9u1), libaio1 (>= 0.3.93), libc6 (>= 2.17), libjemalloc1 (>= 2.1.1), libpcre3, libstdc++6 (>= 5.2), libsystemd0, zlib1g (>= 1:1.2.0)
+Breaks: mariadb-client-10.1 (<< 10.1.26-0+deb9u1), mariadb-server-10.1 (<< 10.1.26-0+deb9u1), mariadb-server-core-10.0, mariadb-server-core-5.5, mysql-client-5.5, mysql-client-5.6, mysql-server-core-5.5, mysql-server-core-5.6, mysql-server-core-5.7
+Conflicts: mariadb-galera-server-5.5, mysql-server-5.5, mysql-server-5.6, mysql-server-5.7, virtual-mysql-server-core
+Description: MariaDB database core server files
+ MariaDB is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MariaDB are speed, robustness and
+ ease of use.
+ .
+ This package includes the core server files, as used by Akonadi.
+Homepage: https://mariadb.org/
 
 Package: x11-session-utils
 Status: install ok installed
@@ -3489,6 +3593,24 @@ Conffiles:
 Description: X server initialisation tool
  xinit and startx are programs which facilitate starting an X server, and
  loading a base X session.
+
+Package: libjemalloc1
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 253
+Maintainer: Stig Sandbeck Mathisen <ssm@debian.org>
+Architecture: i386
+Source: jemalloc
+Version: 3.6.0-9.1
+Depends: libc6 (>= 2.4)
+Description: general-purpose scalable concurrent malloc(3) implementation
+ A library providing a malloc(3) implementation for multi-threaded processes on
+ multi-processor systems.
+ .
+ Notable features are reduced lock contention, predictable low fragmentation,
+ and introspection with heap profiling.
+Homepage: http://www.canonware.com/jemalloc/
 
 Package: sudo
 Status: install ok installed
@@ -4541,6 +4663,30 @@ Description: dummy package to ease purging of obsolete conffiles
  is now shipped in kmod.
 Homepage: http://www.alsa-project.org/
 
+Package: socat
+Status: install ok installed
+Priority: extra
+Section: net
+Installed-Size: 1014
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Architecture: i386
+Version: 1.7.3.1-2+deb9u1
+Depends: libc6 (>= 2.15), libssl1.1 (>= 1.1.0), libwrap0 (>= 7.6-4~)
+Description: multipurpose relay for bidirectional data transfer
+ Socat (for SOcket CAT) establishes two bidirectional byte streams
+ and transfers data between them. Data channels may be files, pipes,
+ devices (terminal or modem, etc.), or sockets (Unix, IPv4, IPv6, raw,
+ UDP, TCP, SSL). It provides forking, logging and tracing, different
+ modes for interprocess communication and many more options.
+ .
+ It can be used, for example, as a TCP relay (one-shot or daemon),
+ as an external socksifier, as a shell interface to Unix sockets,
+ as an IPv6 relay, as a netcat and rinetd replacement, to redirect
+ TCP-oriented programs to a serial line, or to establish a relatively
+ secure environment (su and chroot) for running client or server shell
+ scripts inside network connections. Socat supports sctp as of 1.7.0.
+Homepage: http://www.dest-unreach.org/socat/
+
 Package: libnginx-mod-http-echo
 Status: install ok installed
 Priority: optional
@@ -4614,6 +4760,29 @@ Description: easy-to-use client-side URL transfer library (GnuTLS flavour)
  .
  SSL support is provided by GnuTLS.
 Homepage: http://curl.haxx.se
+
+Package: mariadb-client-core-10.1
+Status: install ok installed
+Priority: optional
+Section: database
+Installed-Size: 22020
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: mariadb-10.1
+Version: 10.1.26-0+deb9u1
+Replaces: mariadb-client-10.0 (<< 10.0.24-6~), mariadb-client-core-10.0, mariadb-client-core-5.5, mysql-client-core-5.5, mysql-client-core-5.6, mysql-client-core-5.7, virtual-mysql-client-core
+Provides: virtual-mysql-client-core
+Depends: mariadb-common (>= 10.1.26-0+deb9u1), libaio1 (>= 0.3.93), libc6 (>= 2.17), libncurses5 (>= 6), libpcre3, libreadline5 (>= 5.2), libstdc++6 (>= 5.2), libtinfo5 (>= 6), zlib1g (>= 1:1.2.0)
+Breaks: mariadb-client-10.0 (<< 10.0.24-6~), mariadb-client-core-10.0, mariadb-client-core-5.5, mysql-client-core-5.5, mysql-client-core-5.6, mysql-client-core-5.7
+Conflicts: mysql-client-5.5, mysql-client-5.6, mysql-client-5.7, virtual-mysql-client-core
+Description: MariaDB database core client binaries
+ MariaDB is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MariaDB are speed, robustness and
+ ease of use.
+ .
+ This package includes the core client files, as used by Akonadi.
+Homepage: https://mariadb.org/
 
 Package: lsof
 Status: install ok installed
@@ -5246,6 +5415,33 @@ Description: small, powerful, scalable web/proxy server - common files
  This package contains base configuration files used by all versions of
  nginx.
 Homepage: http://nginx.net
+
+Package: mysql-common
+Status: install ok installed
+Priority: optional
+Section: database
+Installed-Size: 28
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Multi-Arch: foreign
+Source: mysql-defaults (1.0.2)
+Version: 5.8+1.0.2
+Replaces: mariadb-server-5.5, mysql-common-5.6, mysql-server-5.5, percona-xtradb-cluster-common-5.5
+Provides: mysql-common-5.6
+Breaks: mariadb-common (<< 10.0.20-3~)
+Conflicts: mariadb-server-5.5, mysql-common-5.6, mysql-server-5.5, percona-xtradb-cluster-common-5.5
+Conffiles:
+ /etc/mysql/conf.d/mysql.cnf 61e0993270966cc6bc96b46c01ade21f
+ /etc/mysql/conf.d/mysqldump.cnf 20890decb4486ce539753193908fb356
+ /etc/mysql/my.cnf.fallback cfe2bc1819d5e200eca8ca6912f714af
+Description: MySQL database common files, e.g. /etc/mysql/my.cnf
+ MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MySQL are speed, robustness and
+ ease of use.
+ .
+ This package includes files needed by all versions of the client library,
+ e.g. /etc/mysql/my.cnf.
 
 Package: libxss1
 Status: install ok installed
@@ -8337,6 +8533,31 @@ Description: Open source MPEG-4 video codec (library)
  This package contains the shared library.
 Homepage: http://www.xvid.org/
 
+Package: gawk
+Status: install ok installed
+Priority: optional
+Section: interpreters
+Installed-Size: 2251
+Maintainer: Adrian Bunk <bunk@debian.org>
+Architecture: i386
+Multi-Arch: foreign
+Version: 1:4.1.4+dfsg-1
+Provides: awk
+Pre-Depends: libc6 (>= 2.15), libgmp10, libmpfr4 (>= 3.1.3), libreadline7 (>= 6.0), libsigsegv2 (>= 2.9)
+Suggests: gawk-doc
+Description: GNU awk, a pattern scanning and processing language
+ `awk', a program that you can use to select particular records in a
+ file and perform operations upon them.
+ .
+ Gawk is the GNU Project's implementation of the AWK programming language.
+ It conforms to the definition of the language in the POSIX 1003.2 Command
+ Language And Utilities Standard. This version in turn is based on the
+ description in The AWK Programming Language, by Aho, Kernighan, and
+ Weinberger, with the additional features defined in the System V Release
+ 4 version of UNIX awk. Gawk also provides more recent Bell Labs awk
+ extensions, and some GNU-specific extensions.
+Homepage: http://www.gnu.org/software/gawk/
+
 Package: usbutils
 Status: install ok installed
 Priority: optional
@@ -9718,6 +9939,34 @@ Description: Font rendering engine for Complex Scripts -- library
  .
  This package contains the shared library.
 Homepage: http://graphite.sil.org/
+
+Package: rsync
+Status: install ok installed
+Priority: optional
+Section: net
+Installed-Size: 744
+Maintainer: Paul Slootman <paul@debian.org>
+Architecture: i386
+Multi-Arch: foreign
+Version: 3.1.2-1+deb9u1
+Depends: libacl1 (>= 2.2.51-8), libattr1 (>= 1:2.4.46-8), libc6 (>= 2.15), libpopt0 (>= 1.14), lsb-base (>= 3.2-14), base-files (>= 4.0.1), init-system-helpers (>= 1.18~)
+Suggests: openssh-client, openssh-server
+Breaks: duplicity (<< 0.6.11)
+Conffiles:
+ /etc/init.d/rsync c5d89677f904551f5b192f35ad98d73c
+ /etc/default/rsync b8fd9efa75e2bda2583b0d7c0892a073
+Description: fast, versatile, remote (and local) file-copying tool
+ rsync is a fast and versatile file-copying tool which can copy locally
+ and to/from a remote host. It offers many options to control its behavior,
+ and its remote-update protocol can minimize network traffic to make
+ transferring updates between machines fast and efficient.
+ .
+ It is widely used for backups and mirroring and as an improved copy
+ command for everyday use.
+ .
+ This package provides both the rsync command line tool and optional
+ daemon functionality.
+Homepage: http://rsync.samba.org/
 
 Package: procps
 Status: install ok installed
@@ -11477,6 +11726,25 @@ Description: Live System Configuration Components
  live-config-systemd.
 Homepage: https://debian-live.alioth.debian.org/live-config/
 
+Package: libaio1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 29
+Maintainer: Guillem Jover <guillem@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libaio
+Version: 0.3.110-3
+Depends: libc6 (>= 2.4)
+Description: Linux kernel AIO access library - shared library
+ This library enables userspace to use Linux kernel asynchronous I/O
+ system calls, important for the performance of databases and other
+ advanced applications.
+ .
+ This package contains the shared library.
+Homepage: https://fedorahosted.org/releases/l/i/libaio/
+
 Package: libsemanage1
 Status: install ok installed
 Priority: optional
@@ -11738,6 +12006,28 @@ Description: free implementation of the OpenGL API -- GLX runtime
  This package does not include the modules themselves: these can be found
  in the libgl1-mesa-dri package.
 Homepage: https://mesa3d.org/
+
+Package: galera-3
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 3355
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Version: 25.3.19-2
+Replaces: galera
+Provides: galera, galera3, percona-xtradb-cluster-galera-25, wsrep
+Depends: libc6 (>= 2.9), libgcc1 (>= 1:4.2), libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2)
+Breaks: galera
+Conflicts: garbd-2, garbd2, percona-galera-3, percona-xtradb-cluster-galera, percona-xtradb-cluster-galera-2.x, percona-xtradb-cluster-galera-3.x, percona-xtradb-cluster-garbd-2.x, percona-xtradb-cluster-garbd-3.x
+Description: Replication framework for transactional applications
+ Galera is a fast synchronous multimaster wsrep provider (replication engine)
+ for transactional databases and similar applications. For more information
+ about wsrep API see http://launchpad.net/wsrep. For a description of Galera
+ replication engine see http://galeracluster.com.
+ .
+ This package contains the Galera library/plugin.
+Homepage: http://www.galeracluster.com/
 
 Package: libepoxy0
 Status: install ok installed
@@ -16273,6 +16563,44 @@ Description: Linux PCI Utilities (shared library)
  registers of devices connected to the PCI bus.
 Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
 
+Package: mariadb-server-10.1
+Status: install ok installed
+Priority: optional
+Section: database
+Installed-Size: 73114
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: mariadb-10.1
+Version: 10.1.26-0+deb9u1
+Replaces: mariadb-galera-server, mariadb-galera-server-10.0, mariadb-galera-server-5.5, mariadb-server-10.0, mariadb-server-5.5, mariadb-tokudb-engine-10.0, mariadb-tokudb-engine-10.1, mariadb-tokudb-engine-5.5, mysql-client-5.5, mysql-server-5.5, mysql-server-5.6, mysql-server-5.7, virtual-mysql-server
+Provides: virtual-mysql-server
+Depends: galera-3 (>= 25.3), gawk, iproute2, libdbi-perl, lsb-base (>= 3.0-10), lsof, mariadb-client-10.1 (>= 10.1.26-0+deb9u1), mariadb-server-core-10.1 (>= 10.1.26-0+deb9u1), passwd, perl (>= 5.6), psmisc, rsync, socat, debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.18~), libaio1 (>= 0.3.93), libc6 (>= 2.17), libpam0g (>= 0.99.7.1), libstdc++6 (>= 5.2), libsystemd0, zlib1g (>= 1:1.2.0)
+Pre-Depends: adduser (>= 3.40), debconf, mariadb-common (>= 10.1.26-0+deb9u1)
+Recommends: libhtml-template-perl
+Suggests: mailx, mariadb-test, netcat-openbsd, tinyca
+Breaks: cqrlog (<< 1.9.0-5~), mariadb-galera-server, mariadb-galera-server-10.0, mariadb-galera-server-5.5, mariadb-server-10.0, mariadb-server-5.5, mariadb-tokudb-engine-10.0, mariadb-tokudb-engine-10.1, mariadb-tokudb-engine-5.5, mysql-client-5.5, mysql-server-5.5, mysql-server-5.6, mysql-server-5.7
+Conflicts: mariadb-tokudb-engine-10.0, mariadb-tokudb-engine-10.1, mariadb-tokudb-engine-5.5, mysql-server-core-5.5, mysql-server-core-5.6, mysql-server-core-5.7, virtual-mysql-server
+Conffiles:
+ /etc/apparmor.d/usr.sbin.mysqld 5b43a33a4995f3532bcea02d9c2c87c1
+ /etc/default/mysql 64e6d248978c07392628278d0be66888
+ /etc/init.d/mysql 50c82644a999f08a0861a85c92b7d525
+ /etc/insserv.conf.d/mariadb 2588bf6ebd0da2f146befac246610658
+ /etc/logcheck/ignore.d.paranoid/mariadb-server-10_1 6babe46e791059cdd5a26f4f7fec9eca
+ /etc/logcheck/ignore.d.server/mariadb-server-10_1 a5b52544898b1d96ce64f96ec913ee65
+ /etc/logcheck/ignore.d.workstation/mariadb-server-10_1 a9766f2dd21ba5e5474526b9df4a82a7
+ /etc/logrotate.d/mysql-server 3b27c6ac3dbfe31c1c1db0f880b3a2f4
+ /etc/mysql/debian-start 698c5abe65f83aec900a3f0e3500e758
+ /etc/mysql/mariadb.conf.d/50-mysqld_safe.cnf ace3390ea785e7bb3e87bee2ef0f9da8
+ /etc/mysql/mariadb.conf.d/50-server.cnf 073e32328fb38e45ea4d3a497bbda982
+Description: MariaDB database server binaries
+ MariaDB is a fast, stable and true multi-user, multi-threaded SQL database
+ server. SQL (Structured Query Language) is the most popular database query
+ language in the world. The main goals of MariaDB are speed, robustness and
+ ease of use.
+ .
+ This package includes the server binaries.
+Homepage: https://mariadb.org/
+
 Package: lockfile-progs
 Status: install ok installed
 Priority: optional
@@ -17370,6 +17698,38 @@ Description: Log rotation utility
  monthly or when the log file gets to a certain size.  Normally, logrotate
  runs as a daily cron job.
 Homepage: https://github.com/logrotate/logrotate
+
+Package: libdbi-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 2115
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: libdbi-perl (1.636-1)
+Version: 1.636-1+b1
+Provides: perl-dbdabi-94
+Depends: perl (>= 5.24.1~rc3-2), perlapi-5.24.1, libc6 (>= 2.4)
+Suggests: libclone-perl (>= 0.34), libmldbm-perl, libnet-daemon-perl, libsql-statement-perl (>= 1.402)
+Breaks: libdbd-anydata-perl (<< 0.11+), libdbd-csv-perl (<< 0.3600+), libsql-statement-perl (<< 1.33+)
+Description: Perl Database Interface (DBI)
+ DBI (DataBase Interface) is a Perl framework that provides a common interface
+ to access various backend databases in a uniform manner. DBD (DataBase Driver)
+ modules provide implementations for various backend data storage mechanisms
+ including networked relational databases (particularly SQL databases) and even
+ web services such as the Google search engine.
+ .
+ It is extremely portable and available for a wide range of operating systems,
+ architectures and data stores, including:
+ .
+  * Oracle
+  * Microsoft SQL Server
+  * IBM DB2
+  * SQLite
+  * PostgreSQL
+  * Firebird
+  * MySQL
+Homepage: http://dbi.perl.org/
 
 Package: git
 Status: install ok installed

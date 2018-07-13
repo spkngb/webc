@@ -1477,6 +1477,18 @@ Template: man-db/install-setuid
 Value: false
 Owners: man-db
 
+Name: mariadb-server-10.1/nis_warning
+Template: mariadb-server-10.1/nis_warning
+Owners: mariadb-server-10.1
+
+Name: mariadb-server-10.1/old_data_directory_saved
+Template: mariadb-server-10.1/old_data_directory_saved
+Owners: mariadb-server-10.1
+
+Name: mariadb-server-10.1/postrm_remove_databases
+Template: mariadb-server-10.1/postrm_remove_databases
+Owners: mariadb-server-10.1
+
 Name: nginx/log-symlinks
 Template: nginx/log-symlinks
 Owners: nginx-common
