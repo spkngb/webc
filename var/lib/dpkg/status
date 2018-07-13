@@ -621,7 +621,7 @@ Maintainer: Niko Tyni <ntyni@debian.org>
 Architecture: all
 Multi-Arch: foreign
 Source: perl
-Version: 5.24.1-3+deb9u2
+Version: 5.24.1-3+deb9u4
 Replaces: libansicolor-perl (<< 4.04), libarchive-tar-perl (<< 2.04.01), libattribute-handlers-perl (<< 0.99), libautodie-perl (<< 2.29-2), libcpan-meta-perl (<< 2.150005), libcpan-meta-requirements-perl (<< 2.140), libcpan-meta-yaml-perl (<< 0.018), libdigest-perl (<< 1.17.01), libexperimental-perl (<< 0.016), libextutils-cbuilder-perl (<< 0.280225), libextutils-command-perl (<< 7.10.02), libextutils-install-perl (<< 2.04), libextutils-parsexs-perl (<< 3.310000), libfile-spec-perl (<< 3.6301), libhttp-tiny-perl (<< 0.056.001), libi18n-langtags-perl (<< 0.40), libio-zlib-perl (<< 1.10), libjson-pp-perl (<< 2.27300.01), liblocale-codes-perl (<< 3.37), liblocale-maketext-perl (<< 1.26.01), liblocale-maketext-simple-perl (<< 0.21.01), libmath-bigint-perl (<< 1.999715), libmath-complex-perl (<< 1.59), libmodule-corelist-perl (<< 5.20170114.24), libmodule-load-conditional-perl (<< 0.64), libmodule-load-perl (<< 0.32), libmodule-metadata-perl (<< 1.000031), libnet-perl, libnet-ping-perl (<< 2.43.01), libpackage-constants-perl, libparams-check-perl (<< 0.38), libparent-perl (<< 0.234), libparse-cpan-meta-perl (<< 1.4417.001), libperl-ostype-perl (<< 1.009), libpod-escapes-perl (<< 1.07), libpod-parser-perl (<< 1.63), libpod-simple-perl (<< 3.32), libtest-harness-perl (<< 3.36.01), libtest-simple-perl (<< 1.001014), libtest-tester-perl (<< 0.114), libtest-use-ok-perl (<< 0.16), libthread-queue-perl (<< 3.09), libtime-local-perl (<< 1.2300), libunicode-collate-perl (<< 1.14), libversion-perl (<< 1:0.9916), libversion-requirements-perl, perl-base (<< 5.22.0~), perl-modules, podlators-perl
 Provides: libansicolor-perl, libarchive-tar-perl, libattribute-handlers-perl, libautodie-perl, libcpan-meta-perl, libcpan-meta-requirements-perl, libcpan-meta-yaml-perl, libdigest-perl, libexperimental-perl, libextutils-cbuilder-perl, libextutils-command-perl, libextutils-install-perl, libextutils-parsexs-perl, libfile-spec-perl, libhttp-tiny-perl, libi18n-langtags-perl, libio-zlib-perl, libjson-pp-perl, liblocale-codes-perl, liblocale-maketext-perl, liblocale-maketext-simple-perl, libmath-bigint-perl, libmath-complex-perl, libmodule-corelist-perl, libmodule-load-conditional-perl, libmodule-load-perl, libmodule-metadata-perl, libnet-perl, libnet-ping-perl, libparams-check-perl, libparent-perl, libparse-cpan-meta-perl, libperl-ostype-perl, libpod-escapes-perl, libpod-parser-perl, libpod-simple-perl, libtest-harness-perl, libtest-simple-perl, libtest-tester-perl, libtest-use-ok-perl, libthread-queue-perl, libtime-local-perl, libunicode-collate-perl, libversion-perl, libversion-requirements-perl, perl-modules, podlators-perl
 Depends: perl-base (>= 5.24.1-1)
@@ -867,7 +867,7 @@ Installed-Size: 8046
 Maintainer: Niko Tyni <ntyni@debian.org>
 Architecture: i386
 Source: perl
-Version: 5.24.1-3+deb9u2
+Version: 5.24.1-3+deb9u4
 Replaces: libfile-path-perl (<< 2.12.01), libfile-temp-perl (<< 0.2304), libio-socket-ip-perl (<< 0.37), libscalar-list-utils-perl (<< 1:1.42.02), libsocket-perl (<< 2.020.03), libxsloader-perl (<< 0.22), perl (<< 5.10.1-12), perl-modules (<< 5.20.1-3)
 Provides: libfile-path-perl, libfile-temp-perl, libio-socket-ip-perl, libscalar-list-utils-perl, libsocket-perl, libxsloader-perl, perlapi-5.24.1
 Pre-Depends: libc6 (>= 2.23), dpkg (>= 1.17.17)
@@ -944,15 +944,15 @@ Package: libperl5.24
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 15385
+Installed-Size: 15386
 Maintainer: Niko Tyni <ntyni@debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: perl
-Version: 5.24.1-3+deb9u2
+Version: 5.24.1-3+deb9u4
 Replaces: libarchive-tar-perl (<= 1.38-2), libcompress-raw-bzip2-perl (<< 2.069), libcompress-raw-zlib-perl (<< 2.069), libcompress-zlib-perl (<< 2.069.001), libdigest-md5-perl (<< 2.54), libdigest-sha-perl (<< 5.95.01), libencode-perl (<< 2.86), libio-compress-base-perl (<< 2.069.001), libio-compress-bzip2-perl (<< 2.069.001), libio-compress-perl (<< 2.069.001), libio-compress-zlib-perl (<< 2.069.001), libmime-base64-perl (<< 3.15), libmodule-corelist-perl (<< 2.14-2), libstorable-perl (<< 2.56.01), libsys-syslog-perl (<< 0.33.01), libthreads-perl (<< 2.07), libthreads-shared-perl (<< 1.51), libtime-hires-perl (<< 1.9733), libtime-piece-perl (<< 1.31), perl (<< 5.22.0~), perl-base (<< 5.22.0~)
 Provides: libcompress-raw-bzip2-perl, libcompress-raw-zlib-perl, libcompress-zlib-perl, libdigest-md5-perl, libdigest-sha-perl, libencode-perl, libio-compress-base-perl, libio-compress-bzip2-perl, libio-compress-perl, libio-compress-zlib-perl, libmime-base64-perl, libstorable-perl, libsys-syslog-perl, libthreads-perl, libthreads-shared-perl, libtime-hires-perl, libtime-piece-perl, perl-cross-config
-Depends: libbz2-1.0, libc6 (>= 2.23), libdb5.3, libgdbm3 (>= 1.8.3), zlib1g (>= 1:1.2.2.3), perl-modules-5.24 (>= 5.24.1-3+deb9u2)
+Depends: libbz2-1.0, libc6 (>= 2.23), libdb5.3, libgdbm3 (>= 1.8.3), zlib1g (>= 1:1.2.2.3), perl-modules-5.24 (>= 5.24.1-3+deb9u4)
 Breaks: dh-make-perl (<< 0.73-1), ftpmirror (<< 1.96+dfsg-13), libcompress-raw-bzip2-perl (<< 2.069), libcompress-raw-zlib-perl (<< 2.069), libcompress-zlib-perl (<< 2.069.001), libdigest-md5-perl (<< 2.54), libdigest-sha-perl (<< 5.95.01), libencode-perl (<< 2.86), libhtml-template-compiled-perl (<< 0.95-1), libio-compress-base-perl (<< 2.069.001), libio-compress-bzip2-perl (<< 2.069.001), libio-compress-perl (<< 2.069.001), libio-compress-zlib-perl (<< 2.069.001), libload-perl (<< 0.20-1), libmime-base64-perl (<< 3.15), libnet-jifty-perl (<< 0.14-1), libperl-apireference-perl (<< 0.09-1), libregexp-optimizer-perl (<< 0.15-3), libsoap-lite-perl (<< 0.712-4), libstorable-perl (<< 2.56.01), libsys-syslog-perl (<< 0.33.01), libthreads-perl (<< 2.07), libthreads-shared-perl (<< 1.51), libtime-hires-perl (<< 1.9733), libtime-piece-perl (<< 1.31), libxml-parser-lite-tree-perl (<< 0.14-1), libyaml-perl (<< 0.73-1), mrtg (<< 2.16.3-3.1)
 Description: shared Perl library
  This package contains the shared Perl library, used by applications
@@ -9646,9 +9646,9 @@ Installed-Size: 651
 Maintainer: Niko Tyni <ntyni@debian.org>
 Architecture: i386
 Multi-Arch: allowed
-Version: 5.24.1-3+deb9u2
+Version: 5.24.1-3+deb9u4
 Replaces: perl-modules (<< 5.22.0~)
-Depends: perl-base (= 5.24.1-3+deb9u2), perl-modules-5.24 (>= 5.24.1-3+deb9u2), libperl5.24 (= 5.24.1-3+deb9u2)
+Depends: perl-base (= 5.24.1-3+deb9u4), perl-modules-5.24 (>= 5.24.1-3+deb9u4), libperl5.24 (= 5.24.1-3+deb9u4)
 Pre-Depends: dpkg (>= 1.17.17)
 Recommends: netbase, rename
 Suggests: perl-doc, libterm-readline-gnu-perl | libterm-readline-perl-perl, make
