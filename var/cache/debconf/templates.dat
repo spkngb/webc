@@ -9822,6 +9822,22 @@ Extended_description-zh_cn.utf-8: 在安装 man 和 mandb 这两个程序时，�
 Type: boolean
 Owners: man-db/install-setuid
 
+Name: nginx/log-symlinks
+Description: Possible insecure nginx log files
+Description-da.utf-8: Nginx-logfilerne er muligvis usikre
+Description-de.utf-8: Möglicherweise unsichere Nginx-Protokolldateien
+Description-fr.utf-8: Certains fichiers de journaux semblent non sécurisés
+Description-nl.utf-8: Wellicht onveilige nginx logbestanden
+Description-pt_br.utf-8: Possíveis arquivos de log do nginx inseguros
+Extended_description: The following log files under /var/log/nginx directory are symlinks owned by www-data:\n\n${logfiles}\n\nSince nginx 1.4.4-4 /var/log/nginx was owned by www-data. As a result www-data could symlink log files to sensitive locations, which in turn could lead to privilege escalation attacks. Although /var/log/nginx permissions are now fixed it is possible that such insecure links already exist. So, please make sure to check the above locations.
+Extended_description-da.utf-8: De følgende logfiler under mappen /var/log/nginx er symbolske henvisninger ejet af www-data:\n\n${logfiles}\n\nSiden nginx 1.4.4-4 var /var/log/nginx ejet af www-data. Www-data kunne derfor oprette logfiler med symbolske henvisninger til sensitive placeringer, som igen kunne føre til privilegerede optrapningsangreb. Selvom /var/log/nginx-rettigheder nu er rettet, så er det muligt at sådanne usikre henvisninger stadig findes. Så, husk at kontrollere ovenstående placeringer.
+Extended_description-de.utf-8: Die folgenden Protokolldateien unterhalb des Verzeichnisses /var/log/nginx sind symbolische Verweise, die »www-data« gehören:\n\n${logfiles}\n\nSeit Nginx 1.4.4-4 gehörte /var/log/nginx »www-data«. Dies führte unter anderem dazu, dass »www-data« auf Protokolldateien an vertraulichen Stellen symbolisch verweisen konnte, was im Folgenden zu Rechteerweiterungsangriffen führen konnte. Obwohl die Rechte an /var/log/nginx nun korrigiert sind, ist es möglich, dass derartige unsichere Verweise bereits existieren. Prüfen Sie daher bitte die oben genannten Orte.
+Extended_description-fr.utf-8: Les fichiers de journaux suivants se trouvant dans le dossier /var/log/nginx sont des liens symboliques qui appartiennent à www-data :\n\n${logfiles}\n\nDepuis la version 1.4.4-4 de nginx, /var/log/nginx appartient à www-data. Par conséquent www-data peut faire des liens symboliques des fichiers de journaux vers des emplacements sensibles, ce qui pourrait amener à des attaques par augmentation de droits. Même si désormais les droits de /var/log/nginx ont été sécurisés, il est possible que de tels liens existent déjà. Aussi, veuillez vous assurer d'avoir contrôlé les emplacements ci-dessus.
+Extended_description-nl.utf-8: De volgende logbestanden in de map /var/log/nginx zijn symbolische koppelingen met www-data als eigenaar:\n\n${logfiles}\n\nSinds nginx 1.4.4-4 was www-data eigenaar van /var/log/nginx. Als gevolg daarvan kon www-data een symbolische koppeling maken tussen logbestanden en gevoelige plaatsen, hetgeen op zijn beurt kon leiden tot aanvallen van het type rechtenuitbreiding (privilege escalation). De toegangsrechten voor /var/log/nginx zijn nu gerepareerd, maar het is mogelijk dat er reeds dergelijke onveilige koppelingen bestaan. U moet dus zeker bovenstaande locaties controleren.
+Extended_description-pt_br.utf-8: Os seguintes arquivos de log sob o diretório /var/log/nginx são links simbólicos de propriedade de www-data:\n\n${logfiles}\n\nDesde a versão 1.4.4-4 do nginx, /var/log/nginx é de propriedade de www-data. Como resultado, www-data pode criar links simbólicos dos arquivos de log em locais sensíveis, o que, por sua vez, pode levar a ataques de elevação de privilégio. Embora as permissões de /var/log/nginx estejam agora corrigidas, é possível que tais links inseguros ainda existam. Portanto, por favor, certifique-se de verificar os locais acima.
+Type: note
+Owners: nginx/log-symlinks
+
 Name: openssh-server/permit-root-login
 Default: true
 Description: Disable SSH password authentication for root?

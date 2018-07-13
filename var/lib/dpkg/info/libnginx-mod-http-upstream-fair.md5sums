@@ -1,0 +1,5 @@
+d34f8a3ed5a16c7bbdd4914c939fcd74  usr/lib/nginx/modules/ngx_http_upstream_fair_module.so
+7f219e97824dceaa7074cbb1be7a41c0  usr/share/doc/libnginx-mod-http-upstream-fair/changelog.Debian.gz
+4e26940d9a02f54a1bfca111ea17fe3d  usr/share/doc/libnginx-mod-http-upstream-fair/changelog.gz
+b3bd8b1865c0b81b0c5c7ecaa09c846f  usr/share/doc/libnginx-mod-http-upstream-fair/copyright
+9e1fbce58a137dd6277e2a5395424307  usr/share/nginx/modules-available/mod-http-upstream-fair.conf

@@ -1,0 +1,12 @@
+7142d860a477b0932a0b1e798964bd4b  lib/systemd/system/nginx.service
+9e33ba63c3ed13df086aaef9c474f18d  usr/share/doc/nginx-common/NEWS.Debian.gz
+6c278a3b59d052c93f815dd62e0c2fb0  usr/share/doc/nginx-common/README.Debian
+7f219e97824dceaa7074cbb1be7a41c0  usr/share/doc/nginx-common/changelog.Debian.gz
+4e26940d9a02f54a1bfca111ea17fe3d  usr/share/doc/nginx-common/changelog.gz
+b3bd8b1865c0b81b0c5c7ecaa09c846f  usr/share/doc/nginx-common/copyright
+01aca6d1db394c4705c4838936d65d8a  usr/share/lintian/overrides/nginx-common
+e3eb0a1df437f3f97a64aca5952c8ea0  usr/share/nginx/html/index.html
+9e2e58984ec202ccbfccf056aee69df5  usr/share/vim/addons/ftdetect/nginx.vim
+82273d127ff607bf6db1268d32803c01  usr/share/vim/addons/indent/nginx.vim
+72cf3042e3dbef2a17f880cbe77e0ef3  usr/share/vim/addons/syntax/nginx.vim
+888021bf8af3f0a260983bdbc1f91444  usr/share/vim/registry/nginx.yaml

@@ -1,0 +1,5 @@
+c7b1bcdd1672ec970411abe033f99630  usr/lib/nginx/modules/ngx_http_auth_pam_module.so
+7f219e97824dceaa7074cbb1be7a41c0  usr/share/doc/libnginx-mod-http-auth-pam/changelog.Debian.gz
+4e26940d9a02f54a1bfca111ea17fe3d  usr/share/doc/libnginx-mod-http-auth-pam/changelog.gz
+b3bd8b1865c0b81b0c5c7ecaa09c846f  usr/share/doc/libnginx-mod-http-auth-pam/copyright
+359776e9591c6baf5ac313a89a35d8b9  usr/share/nginx/modules-available/mod-http-auth-pam.conf
