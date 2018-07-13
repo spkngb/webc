@@ -5177,7 +5177,7 @@ Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: foreign
 Source: gnupg2
-Version: 2.1.18-8~deb9u1
+Version: 2.1.18-8~deb9u2
 Replaces: gnupg2 (<< 2.0.21-2), gpgv2 (<< 2.1.11-7+exp1)
 Depends: libbz2-1.0, libc6 (>= 2.7), libgcrypt20 (>= 1.7.0), libgpg-error0 (>= 1.14), zlib1g (>= 1:1.1.4)
 Suggests: gnupg
