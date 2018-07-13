@@ -1934,7 +1934,7 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: all
 Multi-Arch: foreign
 Source: cups
-Version: 2.2.1-8+deb9u1
+Version: 2.2.1-8+deb9u2
 Replaces: cups (<< 1.6.2-2~), cups-common (<< 1.7.0)
 Breaks: cups (<< 1.6.2-2~), cups-common (<< 1.7.0)
 Description: Common UNIX Printing System(tm) - server common files
@@ -4629,7 +4629,7 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: all
 Multi-Arch: foreign
 Source: cups
-Version: 2.2.1-8+deb9u1
+Version: 2.2.1-8+deb9u2
 Description: Common UNIX Printing System(tm) - common files
  The Common UNIX Printing System (or CUPS(tm)) is a printing system and
  general replacement for lpd and the like.  It supports the Internet
@@ -6977,16 +6977,16 @@ Installed-Size: 752
 Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: foreign
-Version: 2.2.1-8+deb9u1
+Version: 2.2.1-8+deb9u2
 Replaces: cups-bsd (<< 1.7.2-3~), ghostscript-cups (<< 9.02~)
-Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.16), libcups2 (= 2.2.1-8+deb9u1), libcupscgi1 (>= 1.4.2), libcupsimage2 (>= 1.4.0), libcupsmime1 (>= 1.4.0), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), libusb-1.0-0 (>= 2:1.0.8), debconf (>= 1.2.9) | debconf-2.0, libc-bin (>= 2.13), cups-core-drivers (>= 2.2.1-8+deb9u1), cups-daemon (>= 2.2.1-8+deb9u1), poppler-utils (>= 0.12), procps, ghostscript (>= 9.02~), cups-common (>= 2.2.1-8+deb9u1), cups-server-common (>= 2.2.1-8+deb9u1), cups-client (>= 2.2.1-8+deb9u1), cups-ppdc, cups-filters (>= 1.0.24-3~)
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.16), libcups2 (= 2.2.1-8+deb9u2), libcupscgi1 (>= 1.4.2), libcupsimage2 (>= 1.4.0), libcupsmime1 (>= 1.4.0), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), libusb-1.0-0 (>= 2:1.0.8), debconf (>= 1.2.9) | debconf-2.0, libc-bin (>= 2.13), cups-core-drivers (>= 2.2.1-8+deb9u2), cups-daemon (>= 2.2.1-8+deb9u2), poppler-utils (>= 0.12), procps, ghostscript (>= 9.02~), cups-common (>= 2.2.1-8+deb9u2), cups-server-common (>= 2.2.1-8+deb9u2), cups-client (>= 2.2.1-8+deb9u2), cups-ppdc, cups-filters (>= 1.0.24-3~)
 Recommends: avahi-daemon, colord, cups-filters (>= 1.0.42) | foomatic-filters (>= 4.0), printer-driver-gutenprint, cups-filters (>= 1.0.36) | ghostscript-cups (>= 9.02~)
 Suggests: cups-bsd, foomatic-db-compressed-ppds | foomatic-db, printer-driver-hpcups, hplip, cups-pdf, udev, smbclient
 Breaks: cups-bsd (<< 1.7.2-3~), foomatic-filters (<< 4.0), ghostscript-cups (<< 9.02~)
 Conffiles:
  /etc/cups/snmp.conf 47b8f1c3fecdc44e3d1fdee4b9eeb3f5
- /etc/cups/cupsd.conf.default 9ffef7ab095f3f35dcd108ba52de6295 obsolete
  /etc/default/cups 2b436fbb1a32b82b6aba45a76a1d7e40 obsolete
+ /etc/cups/cupsd.conf.default 9ffef7ab095f3f35dcd108ba52de6295 obsolete
 Description: Common UNIX Printing System(tm) - PPD/driver support, web interface
  The Common UNIX Printing System (or CUPS(tm)) is a printing system and
  general replacement for lpd and the like.  It supports the Internet
@@ -7171,8 +7171,8 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: cups
-Version: 2.2.1-8+deb9u1
-Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u1)
+Version: 2.2.1-8+deb9u2
+Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u2)
 Breaks: cups (<< 1.5.0)
 Description: Common UNIX Printing System(tm) - MIME library
  The Common UNIX Printing System (or CUPS(tm)) is a printing system and
@@ -7336,15 +7336,15 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: foreign
 Source: cups
-Version: 2.2.1-8+deb9u1
+Version: 2.2.1-8+deb9u2
 Replaces: cups (<< 2.1.0-6~)
-Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.15), libcups2 (= 2.2.1-8+deb9u1), libcupsmime1 (>= 1.5.0), libdbus-1-3 (>= 1.9.14), libgssapi-krb5-2 (>= 1.14+dfsg), libpam0g (>= 0.99.7.1), libpaper1, libsystemd0, init-system-helpers (>= 1.18~), procps, lsb-base (>= 3.2-14~), ssl-cert (>= 1.0.11), adduser, bc
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.15), libcups2 (= 2.2.1-8+deb9u2), libcupsmime1 (>= 1.5.0), libdbus-1-3 (>= 1.9.14), libgssapi-krb5-2 (>= 1.14+dfsg), libpam0g (>= 0.99.7.1), libpaper1, libsystemd0, init-system-helpers (>= 1.18~), procps, lsb-base (>= 3.2-14~), ssl-cert (>= 1.0.11), adduser, bc
 Pre-Depends: dpkg (>= 1.15.7.2)
 Recommends: colord, cups-browsed, avahi-daemon (>= 0.6.31-3~)
-Suggests: cups, cups-bsd, cups-common (>= 2.2.1-8+deb9u1), cups-server-common (>= 2.2.1-8+deb9u1), cups-client (>= 2.2.1-8+deb9u1), cups-ppdc, cups-filters, poppler-utils (>= 0.12), ghostscript (>= 9.02~), cups-filters (>= 1.0.42) | foomatic-filters (>= 4.0), foomatic-db-compressed-ppds | foomatic-db, printer-driver-gutenprint, printer-driver-hpcups, hplip, cups-pdf, udev, smbclient
+Suggests: cups, cups-bsd, cups-common (>= 2.2.1-8+deb9u2), cups-server-common (>= 2.2.1-8+deb9u2), cups-client (>= 2.2.1-8+deb9u2), cups-ppdc, cups-filters, poppler-utils (>= 0.12), ghostscript (>= 9.02~), cups-filters (>= 1.0.42) | foomatic-filters (>= 4.0), foomatic-db-compressed-ppds | foomatic-db, printer-driver-gutenprint, printer-driver-hpcups, hplip, cups-pdf, udev, smbclient
 Breaks: cups (<< 2.1.0-6~)
 Conffiles:
- /etc/apparmor.d/usr.sbin.cupsd ebe4fabcc359b5026b9cdfbaab856439
+ /etc/apparmor.d/usr.sbin.cupsd bef54b224df8356a98094f32d90949a9
  /etc/cups/cups-files.conf e8a5660cade680b6e47591510e570463
  /etc/init.d/cups b6a8f635d8543a5f2076f5ac7da124ed
  /etc/logrotate.d/cups-daemon 7bd7f956a724d571799244af3cd530f6
@@ -8512,9 +8512,9 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: foreign
 Source: cups
-Version: 2.2.1-8+deb9u1
+Version: 2.2.1-8+deb9u2
 Replaces: cups (<< 1.7.1-4~), cups-server-common (<< 2.1.0-7~)
-Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u1), cups-daemon (>= 2.2.1-8+deb9u1), cups-filters-core-drivers (>= 1.0.24-3~)
+Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u2), cups-daemon (>= 2.2.1-8+deb9u2), cups-filters-core-drivers (>= 1.0.24-3~)
 Recommends: avahi-daemon
 Breaks: cups (<< 1.7.1-4~), cups-server-common (<< 2.1.0-7~)
 Description: Common UNIX Printing System(tm) - PPD-less printing
@@ -9259,8 +9259,8 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: cups
-Version: 2.2.1-8+deb9u1
-Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u1), libgcc1 (>= 1:3.0), libstdc++6 (>= 5)
+Version: 2.2.1-8+deb9u2
+Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u2), libgcc1 (>= 1:3.0), libstdc++6 (>= 5)
 Description: Common UNIX Printing System(tm) - PPD manipulation library
  The Common UNIX Printing System (or CUPS(tm)) is a printing system and
  general replacement for lpd and the like.  It supports the Internet
@@ -9867,8 +9867,8 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: cups
-Version: 2.2.1-8+deb9u1
-Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u1)
+Version: 2.2.1-8+deb9u2
+Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u2)
 Recommends: libcupsfilters1 (>= 1.0~b1)
 Description: Common UNIX Printing System(tm) - Raster image library
  The Common UNIX Printing System (or CUPS(tm)) is a printing system and
@@ -16574,9 +16574,9 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: foreign
 Source: cups
-Version: 2.2.1-8+deb9u1
+Version: 2.2.1-8+deb9u2
 Replaces: cups (<< 1.7.3-5~)
-Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u1), libcupsimage2 (>= 1.4.0), cups-common (>= 2.2.1-8+deb9u1), adduser
+Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u2), libcupsimage2 (>= 1.4.0), cups-common (>= 2.2.1-8+deb9u2), adduser
 Suggests: cups, xpp, cups-bsd, smbclient
 Breaks: cups (<< 1.7.3-5~)
 Conflicts: lprng
@@ -16793,8 +16793,8 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: cups
-Version: 2.2.1-8+deb9u1
-Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u1)
+Version: 2.2.1-8+deb9u2
+Depends: libc6 (>= 2.4), libcups2 (= 2.2.1-8+deb9u2)
 Description: Common UNIX Printing System(tm) - CGI library
  The Common UNIX Printing System (or CUPS(tm)) is a printing system and
  general replacement for lpd and the like.  It supports the Internet
@@ -17714,7 +17714,7 @@ Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: cups
-Version: 2.2.1-8+deb9u1
+Version: 2.2.1-8+deb9u2
 Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.16), libgnutls30 (>= 3.5.6), libgssapi-krb5-2 (>= 1.14+dfsg), zlib1g (>= 1:1.2.0)
 Suggests: cups-common
 Breaks: cups (<< 1.5.0)
