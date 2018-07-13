@@ -3295,7 +3295,7 @@ Installed-Size: 1003
 Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: same
-Version: 1.7.6-2+deb9u2
+Version: 1.7.6-2+deb9u3
 Depends: libc6 (>= 2.15), libgpg-error0 (>= 1.14)
 Suggests: rng-tools
 Description: LGPL Crypto library - runtime library
@@ -3796,12 +3796,12 @@ Package: libwavpack1
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 208
+Installed-Size: 209
 Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: wavpack
-Version: 5.0.0-2+deb9u1
+Version: 5.0.0-2+deb9u2
 Depends: libc6 (>= 2.4)
 Description: audio codec (lossy and lossless) - library
  WavPack is a completely open audio compression format providing lossless,
@@ -4510,7 +4510,7 @@ Maintainer: Alessandro Ghedini <ghedo@debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: curl
-Version: 7.52.1-5+deb9u5
+Version: 7.52.1-5+deb9u6
 Depends: libc6 (>= 2.17), libcomerr2 (>= 1.01), libgnutls30 (>= 3.5.6), libgssapi-krb5-2 (>= 1.14+dfsg), libidn2-0 (>= 0.6), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libldap-2.4-2 (>= 2.4.7), libnettle6, libnghttp2-14 (>= 1.12.0), libpsl5 (>= 0.13.0), librtmp1 (>= 2.4+20131018.git79459a2-3~), libssh2-1 (>= 1.7.0), zlib1g (>= 1:1.1.4)
 Recommends: ca-certificates
 Description: easy-to-use client-side URL transfer library (GnuTLS flavour)
@@ -5730,12 +5730,12 @@ Package: libsoup2.4-1
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 913
+Installed-Size: 914
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: libsoup2.4
-Version: 2.56.0-2+deb9u1
+Version: 2.56.0-2+deb9u2
 Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.39.90), libgssapi-krb5-2 (>= 1.14+dfsg), libsqlite3-0 (>= 3.5.9), libxml2 (>= 2.7.4), glib-networking (>= 2.32.0)
 Description: HTTP library implementation in C -- Shared library
  It was originally part of a SOAP (Simple Object Access Protocol)
@@ -7293,12 +7293,12 @@ Package: libsoup-gnome2.4-1
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 34
+Installed-Size: 35
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: libsoup2.4
-Version: 2.56.0-2+deb9u1
+Version: 2.56.0-2+deb9u2
 Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.39.90), libsoup2.4-1 (>= 2.41.90)
 Description: HTTP library implementation in C -- GNOME support library
  It was originally part of a SOAP (Simple Object Access Protocol)
@@ -8463,7 +8463,7 @@ Maintainer: Craig Small <csmall@debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: procps
-Version: 2:3.3.12-3
+Version: 2:3.3.12-3+deb9u1
 Replaces: procps (<< 1:3.3.2-1)
 Depends: libc6 (>= 2.4), libsystemd0 (>= 209)
 Description: library for accessing process information from /proc
@@ -9848,7 +9848,7 @@ Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: openssl1.0
-Version: 1.0.2l-2+deb9u2
+Version: 1.0.2l-2+deb9u3
 Depends: libc6 (>= 2.7), debconf (>= 0.5) | debconf-2.0
 Description: Secure Sockets Layer toolkit - shared libraries
  This package is part of the OpenSSL project's implementation of the SSL
@@ -11835,12 +11835,12 @@ Package: libssl1.1
 Status: install ok installed
 Priority: important
 Section: libs
-Installed-Size: 3348
+Installed-Size: 3349
 Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: openssl
-Version: 1.1.0f-3+deb9u1
+Version: 1.1.0f-3+deb9u2
 Depends: libc6 (>= 2.7), debconf (>= 0.5) | debconf-2.0
 Breaks: salt-common (<= 2016.3.3+ds-3)
 Description: Secure Sockets Layer toolkit - shared libraries
@@ -15139,14 +15139,13 @@ Package: libmad0
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 138
+Installed-Size: 124
 Maintainer: Mad Maintainers <pkg-mad-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Multi-Arch: same
 Source: libmad
-Version: 0.15.1b-8
+Version: 0.15.1b-8+deb9u1
 Depends: libc6 (>= 2.3.4)
-Pre-Depends: multiarch-support
 Description: MPEG audio decoder library
  MAD is an MPEG audio decoder. It currently only supports the MPEG 1
  standard, but fully implements all three audio layers (Layer I, Layer II,
