@@ -9448,7 +9448,7 @@ Installed-Size: 655
 Maintainer: Craig Small <csmall@debian.org>
 Architecture: i386
 Multi-Arch: foreign
-Version: 2:3.3.12-3
+Version: 2:3.3.12-3+deb9u1
 Provides: watch
 Depends: libc6 (>= 2.15), libncurses5 (>= 6), libncursesw5 (>= 6), libprocps6, libtinfo5 (>= 6), lsb-base (>= 3.0-10), init-system-helpers (>= 1.29~)
 Recommends: psmisc
