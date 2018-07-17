@@ -748,6 +748,38 @@ Description: console font and keymap setup program
  classic VGA, the simplistic Fixed, and the cleaned Terminus,
  TerminusBold and TerminusBoldVGA.
 
+Package: suckless-tools
+Status: install ok installed
+Priority: optional
+Section: x11
+Installed-Size: 219
+Maintainer: Ilias Tsitsimpis <i.tsitsimpis@gmail.com>
+Architecture: i386
+Version: 42-2
+Provides: dmenu, lsw, lsx, slock, sprop, sselp, ssid, swarp, tabbed, wmname, xssstate
+Depends: libc6 (>= 2.7), libfontconfig1 (>= 2.11), libpam0g (>= 0.99.7.1), libx11-6, libxft2 (>> 2.1.1), libxinerama1, libxrandr2, libxss1, libcap2-bin
+Suggests: dwm, stterm, surf
+Conffiles:
+ /etc/pam.d/slock 31ef26cacdc8a1da8f0f2f50d6d505e6
+Description: simple commands for minimalistic window managers
+ This package provides simple commands designed to be used with a minimalistic
+ window manager like dwm but they can be useful in scripts regardless of the
+ window manager used.
+ .
+  * dmenu: Dynamic menu is a generic menu for X.
+  * lsw: Lists the titles of all running X windows to stdout, similar to ls(1).
+  * lsx: Lists executables in a directory.
+  * slock: Simple X display locker that locks the X session.
+  * sprop: Sets or gets X window properties.
+  * sselp: Simple X selection printer that prints the X selection to stdout.
+  * ssid: Simple setsid replacement.
+  * swarp: Simple X warping tool to warp the mouse pointer to a given position.
+  * tabbed: Simple generic tabbed fronted to xembed aware applications.
+  * wmname: Prints/sets the window manager name property of the root
+    window imilar to how hostname(1) behaves.
+  * xssstate: Retrieves the state of X screensaver.
+Homepage: http://www.suckless.org
+
 Package: intel-microcode
 Status: install ok installed
 Priority: standard
@@ -1708,6 +1740,22 @@ Description: pager program similar to more
  types of input, such as .doc or .txt.gz files.
 Homepage: http://www.greenwoodsoftware.com/less/
 
+Package: libid3tag0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 108
+Maintainer: Mad Maintainers <pkg-mad-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: libid3tag
+Version: 0.15.1b-12
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4)
+Description: ID3 tag reading library from the MAD project
+ ID3 tag manipulation library with full support for reading ID3v1, ID3v1.1,
+ ID3v2.2, ID3v2.3, and ID3v2.4 tags, as well as support for writing ID3v1,
+ ID3v1.1, and ID3v2.4 tags.
+
 Package: gstreamer0.10-x
 Status: install ok installed
 Priority: optional
@@ -1973,6 +2021,7 @@ Description: small utilities built with klibc for early boot
  initramfs images and embedded systems.
 Homepage: https://git.kernel.org/cgit/libs/klibc/klibc.git
 
+<<<<<<< HEAD
 Package: php7.0-readline
 Status: install ok installed
 Priority: optional
@@ -1991,6 +2040,31 @@ Description: readline module for PHP
  open source general-purpose scripting language that is especially suited
  for web development and can be embedded into HTML.
 Homepage: http://www.php.net/
+=======
+Package: scrot
+Status: install ok installed
+Priority: optional
+Section: graphics
+Installed-Size: 49
+Maintainer: Joao Eriberto Mota Filho <eriberto@debian.org>
+Architecture: i386
+Version: 0.8-18
+Depends: giblib1 (>= 1.2.4), libc6 (>= 2.15), libimlib2 (>= 1.4.5), libx11-6
+Description: command line screen capture utility
+ scrot (SCReen shOT) is a simple command line screen capture
+ utility that uses imlib2 to grab and save images. Multiple
+ image formats are supported through imlib2's dynamic saver
+ modules.
+ .
+ Some features of the scrot:
+   - support to multiple image formats (JPG, PNG, GIF, etc.).
+   - optimization of the screen shots image quality.
+   - capture a specific window or a rectangular area on the
+     screen with the help of switch.
+ .
+ scrot also can be used to monitor a desktop PC in admin absent
+ and register unwanted activities.
+>>>>>>> testing
 
 Package: cups-server-common
 Status: install ok installed
@@ -6026,6 +6100,25 @@ Description: Linux image base package
  This package contains files and support scripts for all Linux
  images.
 
+Package: libimlib2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 611
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: imlib2
+Version: 1.4.8-1
+Depends: libbz2-1.0, libc6 (>= 2.11), libfreetype6 (>= 2.2.1), libgif7 (>= 5.1), libid3tag0 (>= 0.15.1b), libjpeg62-turbo (>= 1.3.1), libpng16-16 (>= 1.6.2-1), libtiff5 (>= 4.0.3), libx11-6, libxext6, zlib1g (>= 1:1.1.4)
+Description: image loading, rendering, saving library
+ Imlib2 is a library that does image file loading and saving as well as
+ rendering, manipulation, arbitrary polygon support, etc.
+ .
+ It does ALL of these operations FAST. Imlib2 also tries to be highly
+ intelligent about doing them, so writing naive programs can be done easily,
+ without sacrificing speed.
+
 Package: libpangoxft-1.0-0
 Status: install ok installed
 Priority: optional
@@ -7414,6 +7507,22 @@ Description: network-related giomodules for GLib - D-Bus services
  extensions in glib-networking, for actions that need to be done in a
  separate process.
 
+Package: giblib1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 67
+Maintainer: Eric Dorland <eric@debian.org>
+Architecture: i386
+Multi-Arch: same
+Source: giblib
+Version: 1.2.4-11
+Depends: libc6 (>= 2.4), libimlib2 (>= 1.4.5)
+Description: wrapper library for imlib2, and other stuff
+ giblib is a library of handy stuff. Contains an imlib2 wrapper to avoid the
+ context stuff, doubly-linked lists and font styles.
+Homepage: http://linuxbrit.co.uk/giblib/
+
 Package: libdatrie1
 Status: install ok installed
 Priority: optional
@@ -7649,6 +7758,24 @@ Description: X Window System font utility programs
   - mkfontdir, a program to generate fonts.dir files;
   - mkfontscale, a program to generate fonts.scale files;
   - fonttosfnt, a program to wrap bitmap fonts in a sfnt (TrueType) wrapper.
+
+Package: libgif7
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 81
+Maintainer: Thibaut Gridel <tgridel@free.fr>
+Architecture: i386
+Multi-Arch: same
+Source: giflib
+Version: 5.1.4-0.4
+Depends: libc6 (>= 2.4)
+Description: library for GIF images (library)
+ GIFLIB is a package of portable tools and library routines for working with GIF
+ images.
+ .
+ This package contains the library.
+Homepage: http://giflib.sourceforge.net/
 
 Package: libpipeline1
 Status: install ok installed
