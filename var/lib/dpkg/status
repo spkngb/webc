@@ -728,6 +728,38 @@ Description: console font and keymap setup program
  classic VGA, the simplistic Fixed, and the cleaned Terminus,
  TerminusBold and TerminusBoldVGA.
 
+Package: suckless-tools
+Status: install ok installed
+Priority: optional
+Section: x11
+Installed-Size: 219
+Maintainer: Ilias Tsitsimpis <i.tsitsimpis@gmail.com>
+Architecture: i386
+Version: 42-2
+Provides: dmenu, lsw, lsx, slock, sprop, sselp, ssid, swarp, tabbed, wmname, xssstate
+Depends: libc6 (>= 2.7), libfontconfig1 (>= 2.11), libpam0g (>= 0.99.7.1), libx11-6, libxft2 (>> 2.1.1), libxinerama1, libxrandr2, libxss1, libcap2-bin
+Suggests: dwm, stterm, surf
+Conffiles:
+ /etc/pam.d/slock 31ef26cacdc8a1da8f0f2f50d6d505e6
+Description: simple commands for minimalistic window managers
+ This package provides simple commands designed to be used with a minimalistic
+ window manager like dwm but they can be useful in scripts regardless of the
+ window manager used.
+ .
+  * dmenu: Dynamic menu is a generic menu for X.
+  * lsw: Lists the titles of all running X windows to stdout, similar to ls(1).
+  * lsx: Lists executables in a directory.
+  * slock: Simple X display locker that locks the X session.
+  * sprop: Sets or gets X window properties.
+  * sselp: Simple X selection printer that prints the X selection to stdout.
+  * ssid: Simple setsid replacement.
+  * swarp: Simple X warping tool to warp the mouse pointer to a given position.
+  * tabbed: Simple generic tabbed fronted to xembed aware applications.
+  * wmname: Prints/sets the window manager name property of the root
+    window imilar to how hostname(1) behaves.
+  * xssstate: Retrieves the state of X screensaver.
+Homepage: http://www.suckless.org
+
 Package: intel-microcode
 Status: install ok installed
 Priority: standard
