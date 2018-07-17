@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/giblib1
+/usr/share/doc
+/usr/share/doc/giblib1
+/usr/share/doc/giblib1/changelog.Debian.gz
+/usr/share/doc/giblib1/changelog.gz
+/usr/share/doc/giblib1/copyright
+/usr/lib
+/usr/lib/i386-linux-gnu
+/usr/lib/i386-linux-gnu/libgiblib.so.1.0.6
+/usr/lib/i386-linux-gnu/libgiblib.so.1
