@@ -1,4 +1,4 @@
-TARGETS = mountkernfs.sh hostname.sh udev keyboard-setup.sh mountdevsubfs.sh hwclock.sh mountall.sh mountall-bootclean.sh urandom mountnfs.sh mountnfs-bootclean.sh checkroot.sh alsa-utils bootmisc.sh procps plymouth-log checkfs.sh checkroot-bootclean.sh x11-common kmod
+TARGETS = mountkernfs.sh hostname.sh udev keyboard-setup.sh mountdevsubfs.sh hwclock.sh mountall.sh mountall-bootclean.sh urandom mountnfs.sh mountnfs-bootclean.sh checkroot.sh alsa-utils bootmisc.sh procps plymouth-log checkfs.sh checkroot-bootclean.sh x11-common kmod screen-cleanup
 INTERACTIVE = udev keyboard-setup.sh checkroot.sh checkfs.sh
 udev: mountkernfs.sh
 keyboard-setup.sh: mountkernfs.sh
@@ -18,3 +18,4 @@ checkfs.sh: checkroot.sh
 checkroot-bootclean.sh: checkroot.sh
 x11-common: mountall.sh mountall-bootclean.sh mountnfs.sh mountnfs-bootclean.sh
 kmod: checkroot.sh
+screen-cleanup: mountall.sh mountall-bootclean.sh mountnfs.sh mountnfs-bootclean.sh

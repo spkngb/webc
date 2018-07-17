@@ -43,7 +43,6 @@
 /etc/systemd/timesyncd.conf
 /etc/systemd/user
 /etc/systemd/user.conf
-/etc/tmpfiles.d
 /etc/udev
 /etc/xdg
 /etc/xdg/systemd

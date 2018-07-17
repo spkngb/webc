@@ -15024,6 +15024,30 @@ Gstreamer-Encoders: audio/AMR; audio/mpeg, mpegversion=(int)1, layer=(int){ 2, 3
 Gstreamer-Uri-Sources: cdda, dvd, pnm
 Gstreamer-Version: 0.10
 
+Package: screen
+Status: install ok installed
+Priority: standard
+Section: misc
+Installed-Size: 1020
+Maintainer: Axel Beckert <abe@debian.org>
+Architecture: i386
+Version: 4.5.0-6
+Depends: libc6 (>= 2.15), libpam0g (>= 0.99.7.1), libtinfo5 (>= 6)
+Suggests: byobu | screenie | iselect (>= 1.4.0-1), ncurses-term
+Conffiles:
+ /etc/init.d/screen-cleanup 44ec7824f5ef10df73e92ad064331ea0
+ /etc/screenrc 12c245238eb8b653625bba27dc81df6a
+Description: terminal multiplexer with VT100/ANSI terminal emulation
+ GNU Screen is a terminal multiplexer that runs several separate "screens" on
+ a single physical character-based terminal. Each virtual terminal emulates a
+ DEC VT100 plus several ANSI X3.64 and ISO 2022 functions. Screen sessions
+ can be detached and resumed later on a different terminal.
+ .
+ Screen also supports a whole slew of other features, including configurable
+ input and output translation, serial port support, configurable logging,
+ and multi-user support.
+Homepage: https://savannah.gnu.org/projects/screen
+
 Package: liborc-0.4-0
 Status: install ok installed
 Priority: optional
