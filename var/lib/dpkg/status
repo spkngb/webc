@@ -2021,7 +2021,6 @@ Description: small utilities built with klibc for early boot
  initramfs images and embedded systems.
 Homepage: https://git.kernel.org/cgit/libs/klibc/klibc.git
 
-<<<<<<< HEAD
 Package: php7.0-readline
 Status: install ok installed
 Priority: optional
@@ -2040,7 +2039,7 @@ Description: readline module for PHP
  open source general-purpose scripting language that is especially suited
  for web development and can be embedded into HTML.
 Homepage: http://www.php.net/
-=======
+
 Package: scrot
 Status: install ok installed
 Priority: optional
@@ -2064,7 +2063,6 @@ Description: command line screen capture utility
  .
  scrot also can be used to monitor a desktop PC in admin absent
  and register unwanted activities.
->>>>>>> testing
 
 Package: cups-server-common
 Status: install ok installed
