@@ -1,0 +1,8 @@
+#!/bin/sh
+
+umount -a
+mount -f / -o remount,ro
+echo s >| /proc/sysrq-trigger
+echo u >| /proc/sysrq-trigger
+echo b >| /proc/sysrq-trigger
+
