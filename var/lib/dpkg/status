@@ -128,6 +128,25 @@ Description: Graphics file viewer under X11
  .
  Includes xsetbg, xview and uufilter.
 
+Package: php7.0-mysql
+Status: install ok installed
+Priority: optional
+Section: php
+Installed-Size: 450
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: php7.0
+Version: 7.0.30-0+deb9u1
+Provides: php-mysqli, php-mysqlnd, php-pdo-mysql, php7.0-mysqli, php7.0-mysqlnd, php7.0-pdo-mysql
+Depends: php-common (>= 1:35), ucf, php7.0-common (= 7.0.30-0+deb9u1), libc6 (>= 2.15)
+Description: MySQL module for PHP
+ This package provides the MySQL module(s) for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Homepage: http://www.php.net/
+
 Package: iputils-ping
 Status: install ok installed
 Priority: important
@@ -2021,25 +2040,6 @@ Description: small utilities built with klibc for early boot
  initramfs images and embedded systems.
 Homepage: https://git.kernel.org/cgit/libs/klibc/klibc.git
 
-Package: php7.0-readline
-Status: install ok installed
-Priority: optional
-Section: php
-Installed-Size: 54
-Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
-Architecture: i386
-Source: php7.0
-Version: 7.0.30-0+deb9u1
-Provides: php-readline
-Depends: php-common (>= 1:35), ucf, php7.0-common (= 7.0.30-0+deb9u1), libc6 (>= 2.4), libedit2 (>= 3.1-20130611), libncurses5 (>= 6), libtinfo5 (>= 6)
-Description: readline module for PHP
- This package provides the readline module(s) for PHP.
- .
- PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
- open source general-purpose scripting language that is especially suited
- for web development and can be embedded into HTML.
-Homepage: http://www.php.net/
-
 Package: scrot
 Status: install ok installed
 Priority: optional
@@ -2063,6 +2063,25 @@ Description: command line screen capture utility
  .
  scrot also can be used to monitor a desktop PC in admin absent
  and register unwanted activities.
+
+Package: php7.0-readline
+Status: install ok installed
+Priority: optional
+Section: php
+Installed-Size: 54
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: php7.0
+Version: 7.0.30-0+deb9u1
+Provides: php-readline
+Depends: php-common (>= 1:35), ucf, php7.0-common (= 7.0.30-0+deb9u1), libc6 (>= 2.4), libedit2 (>= 3.1-20130611), libncurses5 (>= 6), libtinfo5 (>= 6)
+Description: readline module for PHP
+ This package provides the readline module(s) for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Homepage: http://www.php.net/
 
 Package: cups-server-common
 Status: install ok installed
@@ -17846,6 +17865,26 @@ Description: Modular compiler and toolchain technologies, runtime library
  .
  This package contains the LLVM runtime library.
 Homepage: http://www.llvm.org/
+
+Package: php-mysql
+Status: install ok installed
+Priority: optional
+Section: php
+Installed-Size: 12
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: all
+Source: php-defaults (49)
+Version: 1:7.0+49
+Depends: php-common, php7.0-mysql
+Description: MySQL module for PHP [default]
+ This package provides a MySQL module for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This package is a dependency package, which depends on Debian's default
+ PHP version (currently 7.0).
 
 Package: logrotate
 Status: install ok installed

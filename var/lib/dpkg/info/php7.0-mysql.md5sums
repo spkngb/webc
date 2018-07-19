@@ -1,0 +1,9 @@
+f1afeec2b8d66be4a5567f4afdffcedd  usr/lib/php/20151012/mysqli.so
+33d98979eab68300f291c316fafeab83  usr/lib/php/20151012/mysqlnd.so
+f35ada4429b298c97d9d0a6a551f9858  usr/lib/php/20151012/pdo_mysql.so
+7074ef4e0110909dc8c05ebd7ddf9921  usr/share/bug/php7.0-mysql/control
+62d6947cf2bf6603e79f17120f7cf856  usr/share/bug/php7.0-mysql/script
+ce9e2deb0ee80216c1b69fee89157e64  usr/share/lintian/overrides/php7.0-mysql
+9fc5024c5f48ebba786c6076588ed371  usr/share/php7.0-mysql/mysql/mysqli.ini
+bb19fb6e35f9ad94140f6836ff8347a0  usr/share/php7.0-mysql/mysql/mysqlnd.ini
+67fd74d7914a24c90ad92e0eb8b0890a  usr/share/php7.0-mysql/mysql/pdo_mysql.ini
