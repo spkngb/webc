@@ -1,10 +1,10 @@
-TARGETS = cups php7.0-fpm nginx mysql plymouth urandom alsa-utils dnsmasq hwclock.sh sendsigs umountnfs.sh networking umountfs umountroot halt reboot
+TARGETS = cups php7.0-fpm nginx mysql plymouth urandom alsa-utils dnsmasq tinc hwclock.sh sendsigs umountnfs.sh networking umountfs umountroot halt reboot
 dnsmasq: nginx mysql
 hwclock.sh: mysql
-sendsigs: php7.0-fpm dnsmasq plymouth nginx alsa-utils mysql
-umountnfs.sh: php7.0-fpm sendsigs dnsmasq plymouth nginx alsa-utils mysql
-networking: php7.0-fpm dnsmasq umountnfs.sh nginx mysql
-umountfs: php7.0-fpm dnsmasq umountnfs.sh urandom plymouth networking hwclock.sh nginx alsa-utils mysql
+sendsigs: php7.0-fpm dnsmasq plymouth nginx alsa-utils mysql tinc
+umountnfs.sh: php7.0-fpm sendsigs dnsmasq plymouth nginx alsa-utils mysql tinc
+networking: php7.0-fpm dnsmasq umountnfs.sh nginx mysql tinc
+umountfs: php7.0-fpm dnsmasq umountnfs.sh urandom plymouth networking hwclock.sh nginx alsa-utils mysql tinc
 umountroot: umountfs
 halt: umountroot
 reboot: umountroot

@@ -1,4 +1,4 @@
-TARGETS = killprocs console-setup.sh networking motd cups acpid ssh dbus php7.0-fpm dnsmasq nginx bootlogs rsync cron mysql plymouth single rc.local rmnologin
+TARGETS = killprocs console-setup.sh networking motd cups acpid ssh dbus php7.0-fpm dnsmasq nginx bootlogs rsync cron mysql tinc plymouth single rc.local rmnologin
 INTERACTIVE = console-setup.sh
 php7.0-fpm: networking
 dnsmasq: networking
@@ -6,7 +6,8 @@ nginx: networking dnsmasq
 rsync: dnsmasq networking
 cron: dnsmasq
 mysql: networking dnsmasq
-plymouth: php7.0-fpm networking dnsmasq nginx motd cups bootlogs console-setup.sh acpid ssh dbus rsync cron mysql
+tinc: networking dnsmasq
+plymouth: php7.0-fpm networking dnsmasq nginx motd cups bootlogs console-setup.sh acpid ssh dbus rsync cron mysql tinc
 single: killprocs motd bootlogs
-rc.local: php7.0-fpm networking dnsmasq nginx motd cups bootlogs console-setup.sh acpid ssh dbus rsync cron mysql
-rmnologin: php7.0-fpm networking dnsmasq nginx motd bootlogs console-setup.sh acpid ssh dbus rsync mysql
+rc.local: php7.0-fpm networking dnsmasq nginx motd cups bootlogs console-setup.sh acpid ssh dbus rsync cron mysql tinc
+rmnologin: php7.0-fpm networking dnsmasq nginx motd bootlogs console-setup.sh acpid ssh dbus rsync mysql tinc
