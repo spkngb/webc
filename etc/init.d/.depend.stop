@@ -1,8 +1,8 @@
-TARGETS = cups dnsmasq hwclock.sh plymouth urandom alsa-utils sendsigs umountnfs.sh networking umountfs umountroot halt reboot
-sendsigs: dnsmasq plymouth alsa-utils
-umountnfs.sh: sendsigs dnsmasq plymouth alsa-utils
-networking: umountnfs.sh dnsmasq
-umountfs: umountnfs.sh networking dnsmasq urandom plymouth hwclock.sh alsa-utils
+TARGETS = cups dnsmasq tinc hwclock.sh plymouth urandom alsa-utils sendsigs umountnfs.sh networking umountfs umountroot halt reboot
+sendsigs: dnsmasq plymouth alsa-utils tinc
+umountnfs.sh: sendsigs dnsmasq plymouth alsa-utils tinc
+networking: umountnfs.sh dnsmasq tinc
+umountfs: umountnfs.sh networking dnsmasq urandom plymouth hwclock.sh alsa-utils tinc
 umountroot: umountfs
 halt: umountroot
 reboot: umountroot

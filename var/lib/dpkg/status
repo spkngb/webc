@@ -8870,6 +8870,28 @@ Description: privileged helper for utmp/wtmp updates (runtime)
  utmp and wtmp files.
 Homepage: http://git.altlinux.org/people/ldv/packages/?p=libutempter.git
 
+Package: tinc
+Status: install ok installed
+Priority: optional
+Section: net
+Installed-Size: 679
+Maintainer: Guus Sliepen <guus@debian.org>
+Architecture: i386
+Version: 1.0.31-1
+Depends: libc6 (>= 2.15), liblzo2-2, libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.1.4), init-system-helpers (>= 1.18~), lsb-base (>= 3.0-6)
+Conffiles:
+ /etc/default/tinc 9422a351ea59c1edf61403c5470cd589
+ /etc/init.d/tinc ab513a193b06771007b5af653488e338
+ /etc/network/if-post-down.d/tinc 1148e456220b62ce37ae4e72c7be85c9
+ /etc/network/if-pre-up.d/tinc 85672cf5874d652b40fb7c9be7ee18d0
+ /etc/network/if-up.d/tinc 215a6cc80d3951ed1843575eb9c8c8db
+Description: Virtual Private Network daemon
+ tinc is a daemon with which you can create a virtual private network
+ (VPN). One daemon can handle multiple connections, so you can
+ create an entire (moderately sized) VPN with only one daemon per
+ participating computer.
+Homepage: http://www.tinc-vpn.org/
+
 Package: libblkid1
 Status: install ok installed
 Priority: required
