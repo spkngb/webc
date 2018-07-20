@@ -41,7 +41,6 @@ SHOW GRANTS ;
 FLUSH PRIVILEGES ;
 SELECT \`user\`, \`host\`, \`password\`, \`password_expired\`,\`Grant_priv\` FROM \`mysql\`.\`user\` ;
 
-
 DROP USER 'root'@'localhost' ;
 
 SHOW GRANTS ;
@@ -86,5 +85,8 @@ SELECT USER(), CURRENT_USER() ;
 SHOW TABLES ;
 
 EOC
+
+echo "Adding self as cron task for updating website data"
+test -f /etc/cron.d/localsrv-sync || echo '*/15 * * * * root sh -c /.git-fixups/009-localsrv.sh' > /etc/cron.d/localsrv-sync
 
 echo "Local website should be ready for work"
