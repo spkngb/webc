@@ -7342,6 +7342,26 @@ Description: library for dealing with netlink sockets - generic netlink
  protocol.
 Homepage: http://www.infradead.org/~tgr/libnl/
 
+Package: php-curl
+Status: install ok installed
+Priority: optional
+Section: php
+Installed-Size: 12
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: all
+Source: php-defaults (49)
+Version: 1:7.0+49
+Depends: php-common, php7.0-curl
+Description: CURL module for PHP [default]
+ This package provides a CURL module for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This package is a dependency package, which depends on Debian's default
+ PHP version (currently 7.0).
+
 Package: libnss3
 Status: install ok installed
 Priority: optional
@@ -8243,6 +8263,25 @@ Description: GNU C preprocessor
  This package has been separated from gcc for the benefit of those who
  require the preprocessor but not the compiler.
 Homepage: http://gcc.gnu.org/
+
+Package: php7.0-curl
+Status: install ok installed
+Priority: optional
+Section: php
+Installed-Size: 114
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: php7.0
+Version: 7.0.30-0+deb9u1
+Provides: php-curl
+Depends: php-common (>= 1:35), ucf, php7.0-common (= 7.0.30-0+deb9u1), libc6 (>= 2.4), libcurl3 (>= 7.18.0)
+Description: CURL module for PHP
+ This package provides the CURL module(s) for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Homepage: http://www.php.net/
 
 Package: gcc
 Status: install ok installed

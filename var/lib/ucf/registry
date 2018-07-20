@@ -23,3 +23,4 @@ php7.0-fpm 	 /etc/php/7.0/fpm/php.ini
 php7.0-mysql 	 /etc/php/7.0/mods-available/mysqlnd.ini
 php7.0-mysql 	 /etc/php/7.0/mods-available/mysqli.ini
 php7.0-mysql 	 /etc/php/7.0/mods-available/pdo_mysql.ini
+php7.0-curl 	 /etc/php/7.0/mods-available/curl.ini
