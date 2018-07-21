@@ -1,12 +1,23 @@
 #!/bin/sh
 
+# bash variant
+# wait_file() {
+#   local file="$1"; shift
+#   local wait_seconds="${1:-10}"; shift # 10 seconds as default timeout
+#
+#   until test $((wait_seconds--)) -eq 0 -o -f "$file" ; do sleep 1; done
+#
+#  ((++wait_seconds))
+#} ;
+
+# sh variant
 wait_file() {
   local file="$1"; shift
   local wait_seconds="${1:-10}"; shift # 10 seconds as default timeout
 
-  until test $((wait_seconds--)) -eq 0 -o -f "$file" ; do sleep 1; done
+  until test "$wait_seconds" -eq 0 -o -f "$file" ; do wait_seconds=$(($wait_seconds - 1)); sleep 1; done
 
-  ((++wait_seconds))
+  wait_seconds=$(($wait_seconds + 1));
 } ;
 
 echo "Prepare our local website"
