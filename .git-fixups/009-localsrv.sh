@@ -21,9 +21,13 @@ wait_file() {
 } ;
 
 echo "Prepare our local website"
+date
+uptime
+
 echo "Testing for local storage writeability"
 testdir=/lib/live/mount/medium/www/test
-testfile=$testdir/testfile_$RANDOM.txt
+rndnum=$(date +%N|sed s/...$//)
+testfile=$testdir/testfile_${rndnum}.txt
 
 rm -vf "$testfile"
 rmdir -v "$testfile"
