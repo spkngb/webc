@@ -1,6 +1,6 @@
 #!/bin/sh
 
-exec >/tmp/${0}$$.log 2>&1
+exec >/tmp/$(basename ${0})_$$.log 2>&1
 set -x
 
 # bash variant
