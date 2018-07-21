@@ -1,6 +1,35 @@
 #!/bin/sh
 
+wait_file() {
+  local file="$1"; shift
+  local wait_seconds="${1:-10}"; shift # 10 seconds as default timeout
+
+  until test $((wait_seconds--)) -eq 0 -o -f "$file" ; do sleep 1; done
+
+  ((++wait_seconds))
+} ;
+
 echo "Prepare our local website"
+echo "Testing for local storage writeability"
+testfile=/lib/live/mount/medium/www/testfile.txt
+
+rm -v "$testfile"
+
+( until [ -f "$testfile" ]
+do
+  cd /lib/live/mount/medium/ && mkdir -vp www
+  touch "$testfile"
+  sleep 1
+done ; ) &
+
+timeout=60
+
+wait_file "$testfile" "$timeout" && {
+  echo "File is found after $? seconds before ${timeout:-10} seconds timed out: '$testfile'"
+} || {
+  echo "File is not found after waiting for ${timeout:-10} seconds: '$testfile'"
+} ;
+
 echo "Linking website dir as /var/www/html/ subdir"
 ln -s /lib/live/mount/medium/www/desc /var/www/html/
 cd /lib/live/mount/medium/ && mkdir -vp www
@@ -12,6 +41,16 @@ cd /lib/live/mount/medium/www/desc-data/ && ( git reset --hard ; git reset --mix
 echo "Syncing website static files from repo"
 cd /lib/live/mount/medium/www/ && git clone https://github.com/spkldr/desc.git desc
 cd /lib/live/mount/medium/www/desc/ && ( git reset --hard ; git reset --mixed ; git checkout master ; git pull ; )
+
+echo "Waiting creation of mysql unix socket"
+testfile=/var/run/mysqld/mysqld.sock
+timeout=60
+
+wait_file "$testfile" "$timeout" && {
+  echo "File is found after $? seconds before ${timeout:-10} seconds timed out: '$testfile'"
+} || {
+  echo "File is not found after waiting for ${timeout:-10} seconds: '$testfile'"
+} ;
 
 echo "Testing connection to mysql with unix socket"
 mysql -u root <<EOC
@@ -87,6 +126,6 @@ SHOW TABLES ;
 EOC
 
 echo "Adding self as cron task for updating website data"
-test -f /etc/cron.d/localsrv-sync || echo '*/15 * * * * root sh -c /.git-fixups/009-localsrv.sh' > /etc/cron.d/localsrv-sync
+test -f /etc/cron.d/localsrv-sync || ( echo '*/15 * * * * root sh -c /.git-fixups/009-localsrv.sh' > /etc/cron.d/localsrv-sync ; killall firefox ; )
 
 echo "Local website should be ready for work"
