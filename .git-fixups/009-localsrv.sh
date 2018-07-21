@@ -22,14 +22,18 @@ wait_file() {
 
 echo "Prepare our local website"
 echo "Testing for local storage writeability"
-testfile=/lib/live/mount/medium/www/testfile.txt
+testdir=/lib/live/mount/medium/www/test
+testfile=$testdir/testfile_$RANDOM.txt
 
-rm -v "$testfile"
+rm -vf "$testfile"
+rmdir -v "$testfile"
 
 ( until [ -f "$testfile" ]
 do
-  cd /lib/live/mount/medium/ && mkdir -vp www
+  mkdir -vp "$testdir"
   touch "$testfile"
+  date >> "$testfile"
+  uptime >> "$testfile"
   sleep 1
 done ; ) &
 
@@ -40,6 +44,9 @@ wait_file "$testfile" "$timeout" && {
 } || {
   echo "File is not found after waiting for ${timeout:-10} seconds: '$testfile'"
 } ;
+
+rm -vf "$testfile"
+rmdir -v "$testfile"
 
 echo "Linking website dir as /var/www/html/ subdir"
 ln -s /lib/live/mount/medium/www/desc /var/www/html/
