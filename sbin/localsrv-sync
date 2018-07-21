@@ -45,6 +45,8 @@ do
   sleep 1
 done ; ) &
 
+sleep 1
+
 timeout=60
 
 wait_file "$testfile" "$timeout" && {
@@ -69,8 +71,8 @@ echo "Syncing website static files from repo"
 cd /lib/live/mount/medium/www/ && git clone https://github.com/spkldr/desc.git desc
 cd /lib/live/mount/medium/www/desc/ && ( git reset --hard ; git reset --mixed ; git checkout master ; git pull ; )
 
-echo "Waiting creation of mysql unix socket"
-testfile=/var/run/mysqld/mysqld.sock
+echo "Waiting creation of mysqld pid file"
+testfile=/var/run/mysqld/mysqld.pid
 timeout=60
 
 wait_file "$testfile" "$timeout" && {
@@ -78,6 +80,8 @@ wait_file "$testfile" "$timeout" && {
 } || {
   echo "File is not found after waiting for ${timeout:-10} seconds: '$testfile'"
 } ;
+
+sleep 1
 
 echo "Testing connection to mysql with unix socket"
 mysql -u root <<EOC
