@@ -57,7 +57,7 @@ server {
 		# try_files $uri $uri/ =404;
 		# WordPress permalinks in Nginx
 		# try_files $uri $uri/ /blog/index.php?$args;
-		try_files $uri $uri/ /desc/index.php?$args;
+		try_files $uri $uri/ /index.php?$args;
 	}
 
 	# pass PHP scripts to FastCGI server
