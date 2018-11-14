@@ -1,7 +1,9 @@
 #!/bin/sh
 
 echo "Linking website dir as /var/www/html/ subdir"
-ln -s /lib/live/mount/medium/www/desc /var/www/html/
+unlink /var/www/html
+mv -v /var/www/html /var/www/html.prev
+ln -s /lib/live/mount/medium/www/desc /var/www/html
 cd /lib/live/mount/medium/ && mkdir -vp www
 
 echo "Adding /sbin/localsrv-sync as cron task for updating website data"
