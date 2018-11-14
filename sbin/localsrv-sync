@@ -63,12 +63,12 @@ echo "Linking website dir as /var/www/html/ subdir"
 ln -s /lib/live/mount/medium/www/desc /var/www/html/
 cd /lib/live/mount/medium/ && mkdir -vp www
 
-echo "Syncing website mysql data from repo"
-cd /lib/live/mount/medium/www/ && git clone https://github.com/spkldr/desc-data.git desc-data
+echo "Syncing website mysql and hugo data from repo"
+cd /lib/live/mount/medium/www/ && git clone https://github.com/spkngb/desc-data.git desc-data
 cd /lib/live/mount/medium/www/desc-data/ && ( git reset --hard ; git reset --mixed ; git checkout master ; git pull ; )
 
 echo "Syncing website static files from repo"
-cd /lib/live/mount/medium/www/ && git clone https://github.com/spkldr/desc.git desc
+cd /lib/live/mount/medium/www/ && git clone https://github.com/spkngb/desc.git desc
 cd /lib/live/mount/medium/www/desc/ && ( git reset --hard ; git reset --mixed ; git checkout master ; git pull ; )
 
 echo "Waiting creation of mysqld pid file"
